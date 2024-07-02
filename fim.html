@@ -6,20 +6,26 @@
     <title>superlimon</title>
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="styleFIM.css">
+    <style>
+      .aaa:hover{
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body>
     <img class="easteregg" src="senor.png" alt="senor" width="30" height="30" ondragstart="return false">
     <nav>
         <div class="simaall">
           <div class="sima">
-            <img class="logoo" src="logo-Photoroom.png" width="100vh" ondragstart="return false;">
+            <a class="aaa" href="index.html"><img class="logoo" src="logo-Photoroom.png" width="100vh" ondragstart="return false;"></a>
             <h1 class="log">superlimon</h1>
           </div>
-          <p class="acd">Versão: <b class="acd2">6.0</b></p>
+          <p class="acd">Versão: <b class="acd2">6.5</b></p>
           <div class="top-right-buttons">
             <button class="nov" id="showNovidades">Novidades</button>
             <button class="outro" id="showOutro">Discord</button>
             <button class="ajuda" id="showAjuda">Ajuda</button>
+            <button class="historia" id="showHistoria">História</button>
           </div>
         </div>
       </nav>
@@ -55,6 +61,10 @@
         <div class="partee"><a class="parte" href="jogo14.html"><input class="entrar" type="button" value="Lanterna 3"></a></div>
         <div class="partee"><a class="parte" href="jogo15.html"><input class="entrar" type="button" value="Lanterna 4"></a></div>
     </div>
+    <br>
+    <div class="sims">
+      <div class="partee"><a class="parte" href="jogo16.html"><input class="entrar" type="button" value="Equipe"></a></div>
+    </div>
     <div class="sims"></div>
 </div>
     <footer>&copy;Feito por Thiago bel</footer>
@@ -69,17 +79,14 @@
           <h1 class="asad">Novidades!</h1> 
           <br>
           <br>
-          <p class="Verde">1. O CRIADOR ENLOUQUECEU! MAIS 6 FASES PARA O JOGO! elas são: (cegueira impossivel, Cegueira mestreado impossivel, Lanterna, Lanterna impossivel, Lanterna mastreado impossivel) e a Lanterna, Lanterna impossivel, Lanterna mastreado impossivel tem mecanicas novas! que é que se você passar o mouse por cima dos blocos, irá revelar! (lanterna)...</p>
+          <p class="Verde">1. Nova personagem! (Mela)</p>
           <br>
-          <p class="Verde">2. Ui da parte de escolher os mapas melhorou (ficou lindo demais)...</p>
+          <p class="Verde">2. Remodel no limon e senor</p>
           <br>
-          <p class="Verde">3. A tela de carregamento está mais rapido (De 3.5 segundos para 0.2 segundos)...</p>
+          <p class="Verde">3. Nova tela de fundo da parte de escolher os mapas</p>
           <br>
           <p class="Verde">4. Alguns bugs resolvidos...</p>
-          <video width="320" height="240" autoplay loop muted playsinline ondragstart="return false">
-            <source src="GIRAGIRAGIRA.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo HTML5.
-          </video>
+          <img src="senor.png" width="100" ondragstart="return false">
         </div>
       </div>
     
@@ -105,61 +112,96 @@
           <p class="pdoajuda">A versão 3.0 para cima não funciona para mobile por conta de bugs, por isso, é impossivel jogar</p>
         </div>
       </div>
+
+
+      <!-- Overlay de História -->
+<div id="historiaOverlay" class="overlay">
+  <div class="content">
+      <button class="closeButton" id="closeHistoria">Fechar</button>
+      <h1 class="asad">História do Superlimon</h1>
+      <p>Tiktok</p>
+      
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@rapaz._0" data-unique-id="rapaz._0" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@rapaz._0?refer=creator_embed">@rapaz._0</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+      
+  </div>
+</div>
+
       <script type="module" src="script.js"></script>
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const showNovidadesButton = document.getElementById('showNovidades');
-          const showOutroButton = document.getElementById('showOutro');
-          const showAjudaButton = document.getElementById('showAjuda');
-          const novidadesOverlay = document.getElementById('novidadesOverlay');
-          const outroOverlay = document.getElementById('outroOverlay');
-          const helpOverlay = document.getElementById('helpOverlay');
-          const closeNovidadesButton = document.getElementById('closeNovidades');
-          const closeOutroButton = document.getElementById('closeOutro');
-          const closeAjudaButton = document.getElementById('closeAjuda');
-    
-          showNovidadesButton.addEventListener('click', function() {
-            novidadesOverlay.classList.add('open');
-          });
-    
-          showOutroButton.addEventListener('click', function() {
-            outroOverlay.classList.add('open');
-          });
-    
-          showAjudaButton.addEventListener('click', function() {
-            helpOverlay.classList.add('open');
-          });
-    
-          closeNovidadesButton.addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function() {
+    const showNovidadesButton = document.getElementById('showNovidades');
+    const showOutroButton = document.getElementById('showOutro');
+    const showAjudaButton = document.getElementById('showAjuda');
+    const showHistoriaButton = document.getElementById('showHistoria'); // Novo botão
+
+    const novidadesOverlay = document.getElementById('novidadesOverlay');
+    const outroOverlay = document.getElementById('outroOverlay');
+    const helpOverlay = document.getElementById('helpOverlay');
+    const historiaOverlay = document.getElementById('historiaOverlay'); // Nova overlay
+
+    const closeNovidadesButton = document.getElementById('closeNovidades');
+    const closeOutroButton = document.getElementById('closeOutro');
+    const closeAjudaButton = document.getElementById('closeAjuda');
+    const closeHistoriaButton = document.getElementById('closeHistoria'); // Botão de fechar para História
+
+    showNovidadesButton.addEventListener('click', function() {
+        novidadesOverlay.classList.add('open');
+    });
+
+    showOutroButton.addEventListener('click', function() {
+        outroOverlay.classList.add('open');
+    });
+
+    showAjudaButton.addEventListener('click', function() {
+        helpOverlay.classList.add('open');
+    });
+
+    showHistoriaButton.addEventListener('click', function() {
+        historiaOverlay.classList.add('open');
+    });
+
+    closeNovidadesButton.addEventListener('click', function() {
+        novidadesOverlay.classList.remove('open');
+    });
+
+    closeOutroButton.addEventListener('click', function() {
+        outroOverlay.classList.remove('open');
+    });
+
+    closeAjudaButton.addEventListener('click', function() {
+        helpOverlay.classList.remove('open');
+    });
+
+    closeHistoriaButton.addEventListener('click', function() {
+        historiaOverlay.classList.remove('open');
+    });
+
+    // Fechar overlays ao clicar fora delas
+    novidadesOverlay.addEventListener('click', function(event) {
+        if (event.target === novidadesOverlay) {
             novidadesOverlay.classList.remove('open');
-          });
-    
-          closeOutroButton.addEventListener('click', function() {
+        }
+    });
+
+    outroOverlay.addEventListener('click', function(event) {
+        if (event.target === outroOverlay) {
             outroOverlay.classList.remove('open');
-          });
-    
-          closeAjudaButton.addEventListener('click', function() {
+        }
+    });
+
+    helpOverlay.addEventListener('click', function(event) {
+        if (event.target === helpOverlay) {
             helpOverlay.classList.remove('open');
-          });
-    
-          novidadesOverlay.addEventListener('click', function(event) {
-            if (event.target === novidadesOverlay) {
-              novidadesOverlay.classList.remove('open');
-            }
-          });
-    
-          outroOverlay.addEventListener('click', function(event) {
-            if (event.target === outroOverlay) {
-              outroOverlay.classList.remove('open');
-            }
-          });
-    
-          helpOverlay.addEventListener('click', function(event) {
-            if (event.target === helpOverlay) {
-              helpOverlay.classList.remove('open');
-            }
-          });
-        });
+        }
+    });
+
+    historiaOverlay.addEventListener('click', function(event) {
+        if (event.target === historiaOverlay) {
+            historiaOverlay.classList.remove('open');
+        }
+    });
+});
+
       </script>
 
 

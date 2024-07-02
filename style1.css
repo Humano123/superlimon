@@ -19,6 +19,7 @@ body, html {
     width: 80vmin;
     height: 60vmin;
     border: 1px solid #000;
+    background-color: chocolate;
 }
 
 #player {

@@ -1,15 +1,8 @@
-body{
-    user-select: none;
-}
 #secretInput {
     display: none;
 }
 img{
     user-select: none;
-    cursor: default;
-}
-img:hover{
-cursor: default;
 }
 footer{
     user-select: text;
@@ -78,10 +71,10 @@ padding: 0;
 box-sizing: border-box;
 }
 body{
-background-image: url(verde-Photoroom.png);
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
+    user-select: none;
+    background-image: url('fundomobi.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: 100% 140%;
+    background-repeat: no-repeat;
 }
 .parte{
 text-decoration: none;
@@ -229,7 +222,7 @@ color: white; /* Cor do texto em branco */
 margin-left: 10px;
 }
 
-.nov, .ajuda, .outro {
+.nov, .ajuda, .outro, .historia {
 background-color: rgb(255, 0, 0);
 color: aliceblue;
 border: 0;
@@ -238,11 +231,11 @@ cursor: pointer;
 transition: transform 0.3s ease-in-out;
 }
 
-.nov:hover, .ajuda:hover, .outro:hover {
+.nov:hover, .ajuda:hover, .outro:hover, .historia:hover {
 background-color: rgb(108, 0, 0);
 }
 
-.nov:active, .ajuda:active, .outro:active {
+.nov:active, .ajuda:active, .outro:active, .historia:active {
 transform: scale(0.95);
 }
 
@@ -306,22 +299,22 @@ text-decoration: underline;
 background-color: #ffffff; /* Cor de fundo da seleção */
 color: #000000;
 }
-.ajuda, .nov, .outro{
+.ajuda, .nov, .outro, .historia{
 background-color: rgb(255, 0, 0);
 color: aliceblue;
 border: 0;
 transition: transform 0.3s ease-in-out;
 }
-.ajuda:hover, .nov:hover, .outro:hover{
+.ajuda:hover, .nov:hover, .outro:hover, .historia:hover{
 background-color: rgb(108, 0, 0);
 }
-.nov:hover, .outro:hover{
+.nov:hover, .outro:hover, .historia:hover{
 cursor: pointer;
 }
 .ajuda:hover{
 cursor: help;
 }
-.ajuda:active, .nov:active, .outro:active{
+.ajuda:active, .nov:active, .outro:active, .historia:active{
 transform: scale(0.5);
 cursor: wait;
 }

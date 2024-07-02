@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>superlimon</title>
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="style16.css">
     <style>
             img{
       user-select: none;
@@ -14,18 +14,20 @@
 </head>
 <body>
     <a href="fim.html"><input type="button" value="Voltar"></a>
-    <div style="display: flex; justify-content: center; align-items: center;">
+    <div class="wrapper">
         <div id="container">
-            <img id="player" src="escuridao.png" alt="Player" ondragstart="return false;">
-            <div class="block" style="top: 100px; left: 100px;"></div>
-            <div class="block" style="top: 200px; left: 300px;"></div>
-            <div class="block" style="bottom: 100px; right: 300px;"></div>
-            <div class="block" style="bottom: 0; right: 200px;"></div>
-            <div class="block" style="bottom: 0; right: 300px;"></div>
-            <div class="block" style="bottom: 100px; left: 100px;"></div>
-            <div class="block" style="bottom: 0; left: 50px;"></div>
-            <div class="block" style="top: 0; right: 100px;"></div>
-            <div id="endBlock" style="top: 200px; left: 100px;"></div>
+            <img id="player" src="todos.png" alt="Player" ondragstart="return false;">
+            <div class="block" style="top: 25%; left: 10%;"></div>
+            <div class="block" style="top: 12.5%; left: 90%;"></div>
+            <div class="block" style="top: 25%; left: 37.5%;"></div>
+            <div class="block" style="top: 25%; left: 50%;"></div>
+            <div class="block" style="top: 25%; left: 90%;"></div>
+            <div class="block" style="top: 50%; left: 37.5%;"></div>
+            <div class="block" style="top: 50%; left: 90%;"></div>
+            <div class="block" style="top: 90%; left: 50%;"></div>
+            <div class="block" style="top: 70%; left: 37.5%;"></div>
+            <div class="block" style="top: 50%; left: 80%;"></div>
+            <div id="endBlock"></div>
             <!-- Adicione mais blocos conforme necessário -->
         </div>
         <div class="controls">
@@ -37,7 +39,6 @@
             </div>
         </div>
     </div>
-
     <script>
         const player = document.getElementById('player');
         const container = document.getElementById('container');
@@ -191,6 +192,5 @@
     <footer>&copy;Feito por Thiago bel</footer>
     <script type="module" src="script.js"></script>
     <script type="module" src="NOMOBILE.js"></script>
-
 </body>
 </html>
